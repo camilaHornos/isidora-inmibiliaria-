@@ -1,0 +1,892 @@
+/*eso es para celular */
+
+
+/*aca va ls letras y su estilo*/
+@font-face {
+  font-family:"frauces" ;
+  src: url(../letras\ elejidas/frauces);
+}
+
+@font-face {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  src: url(../letras\ elejidas/roboto);
+}
+
+
+ body{ 
+   margin: 0;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+/*este es el estilo d eletra d elos titulos*/
+  h1,h2,h3,h4,h5,h6{ 
+    font-family:"bitter" ;
+  }
+
+
+  p{
+line-height: 25px;
+  }
+
+
+img{
+  width: 100%;
+display: block;
+
+/*para que la simagenes no se salgan del div y queden de un tamoñoa ocrde y no grande ocupando todo*/
+}
+
+  /*aca se termina las edicione sbase de la pagina*/
+  /*emepiza la edicion del menu*/
+.container--felx{
+display: flex;
+justify-content: space-between;
+align-items: center;/*para que quede centrado el logo del menu el titulo ye so*/
+}
+
+/*estilos de header*/
+  .main-header{
+padding: 0 15px; 
+}
+
+.main-title{
+  margin-top: 19px;
+ margin: 10px;
+color: white;
+}
+
+
+/*estilos menu*/
+.menu{/*diseño del menu*/
+position: absolute;
+top: 80px;
+left: 0;
+background: #212121;
+width: 100%;
+list-style: none;
+padding: 20px;
+margin: 0;
+z-index: 999;/*con este valor en positivo hacemos que elmenu se valla hacia delnate de las cosas y resalte*/
+opacity: 0;/*vamos con esto a ocultar el menu*/
+visibility: hidden;/*lo desaparecemos del todo */
+transition: all 0.5s; /*para que s evea la trancicion del menu*/
+}
+
+
+.menu__item{
+  padding: 20px;
+  text-align: center;
+  color: rgb(234, 230, 230);
+  width: 150px;
+  margin: auto;
+  
+}
+
+.menu__link {
+color: rgb(237, 237, 237);
+text-decoration: none;
+text-align: center;
+position: relative;
+display: block;
+}
+
+
+  /*vamos a ser los bordes d ecautro rallas del menu*/
+  .menu__link:before {
+content: "";
+position: absolute;
+width: 5px;
+height: 5px;
+border-right: 2px solid #EEAD33;
+border-top:2px solid #EEAD33; 
+top: 0;
+right: 0;
+opacity: 0;
+
+  }
+
+  .menu__link:after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-left: 2px solid #EEAD33;
+    border-bottom:2px solid #EEAD33; 
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+      }
+
+.menu__link span:before{
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-left: 2px solid #EEAD33;
+  border-top:2px solid #EEAD33; 
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.menu__link  span:after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-bottom: 2px solid #EEAD33;
+  border-right:2px solid #EEAD33; 
+  bottom: 0;
+  right: 0;
+  opacity:0;
+    }
+
+    .menu__link  span{
+padding: 10px;
+font-size: 1.1em;
+display: block;
+/*para separar las rallas del texto*/
+    }
+
+    /*esto es para que la decoracion del menu solo paresca fijo en el primeor y despues si en los otros cuando pase el mause*/
+    .menu__link--select:before, .menu__link--select::after, .menu__link--select span:before,   .menu__link--select span::after{
+opacity: 1;
+    }
+
+
+    /*cuando el mause pase que aparezaca las otras decoraicones en el menu */
+.menu__item:hover .menu__link::before, .menu__item:hover .menu__link:after, .menu__item:hover .menu__link span::before, .menu__item:hover .menu__link span::after {
+opacity: 1;
+
+}
+
+  /*hasta aca el bore del menu*/
+
+/*iconos y que el menu funcione*/
+.fa-instagram, .fa-whatsapp, .fa-linkedin  {
+color: #dfd0d0;
+}
+
+.nav-social{
+  display: flex;
+text-align: center;
+}
+
+.nav-social__item{
+width: 35px;
+height: 35px;
+display: block;
+text-align: center;
+padding: 10px;
+border-radius: 50%;
+margin: 10px;
+}
+
+.nav-social__item:first-child{
+  background: #3b5998;
+}
+.nav-social__item:nth-child(2){
+  background: #1da1f2;
+}
+.nav-social__item:nth-child(3){
+  background: #ea4c89;
+}
+.nav-social__item i{
+  color: white;
+}
+.mostrar{/*aca vamos a crear la clase mostrar*/
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-social__item:first-child{
+background: #3b5998;
+}
+
+
+
+.nav-social :hover{
+color:#EEAD33;
+}
+/*eso es para el color de la sletrad del menu de arriba de la foto*/
+ .color-span{
+color: #EEAD33;
+}
+
+
+/*este es para el logo del menu*/
+.icon-menu{
+font-size: 1.53em ;
+color: #EEAD33;
+border: 1px solid white;/*brode blanco*/
+display: block;
+padding: 5px 12px;
+border-radius: 5px;/*para redondera ñps bordes del logo de menu que envuelve al logo del medu*/
+cursor: pointer;/*aca deberia aparecer el menu cuando le doy clik*/
+}
+
+.banner{
+background: url(../fotos/hogar3.png);
+position: absolute;
+background-repeat: no-repeat;
+min-height:400px;
+top: 0;
+left: 0;
+width: 100%;
+z-index: -999;/*para que aparesca el tituloa arriba de la img*/
+
+}
+
+/*la barra fondo negro que resalta la imagen es un seduo elemento vamos a ponerlo*/
+/*before y after para creat un seudo elemento es decir un ellemtno a partir de otro
+si es un texo en content""dentro de las comillas se pondria el texto*/
+.banner :before{
+content: "";
+width: 100%;
+min-height: 400px;
+background: rgba(0, 0, 0, 0.1);/*esto es para la opacidad*/
+position: absolute;
+top: 0;
+left: 0;
+
+}
+
+.banner__content{
+    font-size: 1.3em;
+ width: 100%;
+padding: 15px;
+position: absolute;
+top: 60%;
+left: 50%;
+transform: translateX(-50%) translateY(-50%);/*para mover el tirulo que queda dentro d ela img*/
+color: white;
+}
+
+
+
+/*parte del main*/
+
+.main{
+margin-top: 350px;
+
+}
+
+.section__title{
+font-size: 2em;
+position: relative;
+text-align: center;
+}
+
+
+.welcome{
+  text-align: center;
+padding: 20px ;
+}
+
+.welcome__txt{
+font-size: 1.3em;
+color: #777;
+}
+
+
+.section__title {
+  font-size: 2em;
+  position: relative;
+  text-align: center;
+}
+.section__title:before {
+  content: "";
+  width: 200px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #EEAD33;
+}
+
+
+
+.welcome__title{
+font-size: 3em;
+color: #777;
+position: relative;
+text-align: center;
+
+}
+
+
+
+.welcome__btn{
+display: block;
+border: 2px solid #EEAD33;
+width: 200px;
+margin: auto;
+padding: 10px;
+text-decoration: none;
+color: #EEAD33;
+font-size: 1.3em;
+font-weight: bold;
+margin-top: 30px;
+transition: all 0.5s;/*para que el bootn tenga un efecto le colocamos una transision de medio segundo*/
+text-align: center;
+}
+/*este efecto es para cuando paso el mause por el btn*/
+.welcome__btn:hover {
+background: #EEAD33;
+color: white;
+}
+
+
+/*esto e spara la linea a marilla arriba del tirulo de welcomw
+esto lo vamso hacer con un seudo elemento*/
+
+.welcome__title:before{
+content: "";
+width: 30%;
+position: absolute;
+height: 3px;
+background: #EEAD33;
+top: -20px;
+left: 35%;
+}
+
+/*ahora va la seccion de 4 imagenes*/
+
+
+.design__img{
+  object-fit: cover;
+  }
+  
+.design__item{
+position: relative;
+}
+
+.design__item::before{
+  content: "";
+  width: 100%;
+ height: 100%;
+  background: rgba(0, 0, 0, 0.4);/*esto es para la opacidad*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*un fondo negro sobre la img para reslatar las letras*/
+}
+
+.design__title{
+position: absolute;
+top: 40%;
+left: 50%;
+transform: translateX(-50%) translateY(-50%) ;
+color: aliceblue;
+font-size: 1.8em;
+width: 100%;
+text-align: center;
+}
+
+
+/*para las lineas del titulo dentro de la img*/
+.design__title::before{
+content: "";
+width: 30%;
+position: absolute;
+top: -20px;
+left: 50%;
+height: 3px;
+background: #EEAD33;
+transform: translateX(-50%);
+
+}
+
+
+.design__title::after{
+  content: "";
+  width: 200%;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  height: 3px;
+  background: #EEAD33;
+  transform: translateX(-50%);
+  }
+
+  .container-design{
+margin:60px 0; 
+  }
+
+
+
+  /*EMPEZAMS LA DESCRPCION LA IMAGEN DE LA PERSONA FOTO REDONDA*/
+
+
+  .container-testimonials {
+    margin: 60px auto;
+    max-width: 650px;
+  }
+
+  .testimonials__img{
+width: 120px;/*achicamos la foto*/
+height: 120px;
+border-radius: 50%;
+object-fit: cover;/*para que la img no se deforme */
+margin: auto;
+}
+
+.testimonials__txt{
+text-align: center;
+padding: 20px;
+font-size: 1.4em;
+}
+
+.testimonials__name{
+text-align: center;
+font-size: 1.4em;
+color: #EEAD33;
+font-weight: bold;
+text-transform: uppercase/*para poner en mayuscula todo*/;
+}
+
+
+/*img de abajo de la descpricion*/
+
+.box{
+  display: flex;
+  align-items: center;
+justify-content: center;
+  padding: 20px;
+  margin: 30px 0;
+  margin-right: 9px;
+}
+
+
+.box__icon{
+  width: 100px;
+  height: 100px;
+  border: 2px solid #999;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #EEAD33;
+}
+
+
+.box__icon :hover{
+color: black;
+}
+
+.box__content{
+width: 70%;
+}
+
+.box__title{
+  color: #EEAD33;
+  margin: 0;}
+
+.box__txt{
+  color: #999;
+}
+
+.newsletter{
+  margin: 50px 0;
+}
+/*footer*/
+
+.main-footer{
+background: #282828;
+color: #828282;
+padding: 20px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+
+.column--50-25{
+width: 49%;
+padding: 10px;
+}
+
+
+
+.footer__author {
+text-align: right;
+color: #EEAD33;
+display: block;
+}
+
+
+.fa-twitter{
+color: #3bbef5;
+margin-right: 5px;
+}
+
+.footer__link{
+color: #EEAD33;
+}
+
+.footer__date{
+  font-size: .8em;
+  border-bottom: 1px solid rgb(74, 74, 74);
+  padding-bottom: 10px;
+  color: white;
+  }
+
+.footer__title{
+font-size:1.8em ;
+text-transform: uppercase;
+}
+
+
+.social-icon{
+  display: flex;
+  align-items: flex-start;
+  
+  }
+
+.social-icon i {
+  display: block;
+   margin-right: 10px;
+   width: 35px;
+   height: 35px;
+   text-align: center;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  
+    }
+
+  
+.fa-facebook-f{
+background:#3b5998 ;
+color: white;
+  }
+
+.social__link{
+display: block;
+text-decoration: none;
+color: #828282; 
+text-align: center;
+}
+
+
+.fa-instagram{
+  background: #f09433; 
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+
+
+.fa-linkedin{
+  background: #edeef0;
+color: #132aac;
+}
+
+.fa-google-plus{
+background: rgb(90, 49, 9);
+color: #ba703f;
+}
+
+
+.fa-whatsapp{
+color: #25D366;
+background-color: #102718;
+}
+
+.contact-icon{
+display: flex;
+align-items: center;
+}
+
+
+.fa-location-dot{
+color: rgb(249, 246, 246);
+margin-right: 10px;
+}
+
+
+
+.fa-phone{
+  color: rgb(249, 246, 246);
+  margin-right: 10px;
+  }
+
+  
+  
+.fa-envelope{
+  color: rgb(249, 246, 246);
+  margin-right: 10px;
+  }
+  
+
+  .copy{
+background:#211e1e ;
+padding: 20px;
+color: white;
+text-align: center;
+  }
+
+
+  .span-color{
+color: #EEAD33;
+text-align: center;
+  }
+
+
+  /*ahora lo haremos para escritorio*/
+/*apartir de 768 va haber un cambio de estilos*/
+  @media screen and(min-width: 768px){
+  .menu{/*diseño del menu*/
+  position: absolute;
+    opacity: 1;
+visibility: visible;
+width: auto;
+display: flex;
+background: none;
+font-size:.8em ;
+    }
+    
+.menu__item{
+width: auto;
+}
+
+    .icon-menu{
+      display: none;
+      }
+
+.banner{
+min-height: 500px;
+}
+
+.banner:before{
+min-height: 500px;
+
+}
+
+
+.main{
+margin-top: 400px;
+}
+
+
+.box{
+justify-content: center;
+}
+
+.box__icon{
+left: 50px;
+justify-content: center;
+display: contents;
+}
+
+  }
+
+@media screen and (min-width :1024px){
+
+
+.banner::before{
+min-width: 600px;
+
+}
+
+.design__img{
+object-fit: cover;
+}
+
+
+.design__item{
+width: 50%;
+}
+
+
+.container-box{
+  width: 50%;
+}
+
+
+.conatiner-design{
+ display: flex; 
+border: #102718;
+}
+
+
+.design__item {
+display:inline-flex ;
+border: solid 3px #102718;  
+}
+
+.desingn__img{
+object-fit: contain;
+}
+
+
+
+.design__title::before{
+  content: "";
+  width: 30%;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  height: 3px;
+  background: #EEAD33;
+  transform: translateX(-50%);
+  
+  }
+  
+  
+  .design__title::after{
+    content: "";
+    width: 50%;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    height: 3px;
+    background: #EEAD33;
+   
+    }
+  
+
+    
+
+    .banner{
+      background: url(../fotos/fachada\ fondo\ de\ menu.jpg);
+      position: absolute;
+      background-repeat: no-repeat;
+      min-height:800px;
+      top: 0;
+      left: 0px;
+      width: 1900px;
+      z-index: -999;/*para que aparesca el tituloa arriba de la img*/
+      }
+
+      .welcome__txt,.welcome__title{
+      color: #102718;
+      }
+      
+
+      .titulo_correo{
+        display: flex;
+        justify-content: center;
+
+      }
+
+
+      .color_form{
+        background-color: #074554;
+        display: flow-root;
+        align-items: center;
+        font-size: 60px;
+        color: #c2cbd1;
+      }
+
+
+      
+      .div__form__correo{
+
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap; /* para cuando sea responsibo se pues deslizae  */
+        justify-content: center;
+        background-color: #161414f3;
+        margin: 50px 50px;
+        border: 3px solid rgb(8, 107, 122);
+      }
+
+      .form_correo__section{
+        min-width: 300px;
+        flex: 2;
+        text-align: center;
+         padding: 90px
+      }
+
+
+      textarea {
+        min-height: 250px;
+        resize: none;
+      }
+
+
+      
+       .form__input{
+       width: 850px;
+       justify-content: right;
+       margin: 10px 0;
+       padding: 30px;
+       border: none;
+       border-bottom:  3px solid rgb(37, 84, 84);
+       background: transparent;
+       }
+
+
+       .form__input:focus{
+        background:linear-gradient(to bottom, transparent, rgb(70, 67, 67) );
+        outline: none;
+        border: 3px solid  rgb(31, 193, 208);
+        color: #dedfe5;
+       }
+   
+       .contenedor_img{
+      
+        padding: 12px;
+        margin: auto;
+       border: 1px solid ;
+        background-color: #ebe5e5;
+       }
+
+
+
+      .img_correo{
+        flex: 1;
+     width: 85%;
+     display: flex;
+      margin: auto;
+      padding: 20px;
+      
+      }
+
+      .botton_input{
+        width: 850px;
+        justify-content: right;
+        margin: 10px 0;
+        padding: 30px;
+        border: none;
+        border-bottom:  3px solid rgb(37, 84, 84);
+        background: transparent;
+        color: #fff;
+      }
+
+      .botton_input:hover{
+       color: #25D366;
+      }
+
+      
+      .botton_input:active{
+        color: #25cdd3;
+        background-color: #3b5998;
+        transition: 0.6s;
+       }
+
+
+
+     /*esta son las cosas con las que se entrega junto a sus iconos*/
+      .container-box{
+      display: flex;
+     margin: auto;
+      }
+
+      .box{
+     display: flow-root;
+      align-items: center;
+      }
+
+      /* titulo arriba de las tipologias */
+      .tipologias{
+        display: flex;
+        justify-content: center;
+      }
+
+    }

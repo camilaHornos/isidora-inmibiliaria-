@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inmobiliaria</title>
+    <script src="../elementoscss/index.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.js"></script>
+    <link rel="stylesheet" href="../elementoscss/index.css">
+</head>
+<body>
+    <!--vamos a hacer primero la version de movil y luego vamos
+    a agrandarlo para pc-->  
+<header class="main-header">
+<div class="container container--felx">
+<h1 class="main-title"> <span class="color-span">PATIO ISIDORO</span>  <!--este span e spara despues poner un clase a ese titulo porque se repite el color y las letras en varias partes de la pagian ais reutilizamos--> <br>   PROYECTO</h1><!--ESTE SERIA EL TITUALO-->
+
+<!--el nav en este caso va estar afuera -->
+
+<nav class="main-nav ">
+<!--icono del menu-->
+<span class="icon-menu" id="btn-menu"><i class="fa-solid fa-bars"></i></span>
+    <ul class="menu" id="menu">
+        <li class="menu__item"><a href="" class="menu__link menu__link--select"><span>INICIO</span></a></li>
+        <li class="menu__item"><a href="" class="menu__link"><span>BROCHURE</span></a></li>
+        <li class="menu__item"><a href="" class="menu__link"><span>DISPONIBILIDAD</span></a></li>
+        <li class="menu__item"><a href="" class="menu__link"><span>CONTACTO</span></a></li>
+           <div class="nav-social"><!--aca van los iconos dentro de este nav-->
+       <a href=""><i class="fa-brands fa-instagram"></i></a> 
+       <a href=""><i class="fa-brands fa-whatsapp"></i></a> 
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+    </ul>
+</nav>
+</div>
+
+</header>
+
+
+<!--aca va eatr la imgen del principoio de la pagina donde sobre ella s eva desplegar el menu al tocar el icono demenu-->
+<div class="banner">
+    <div class="banner__content"><!--PARA MOVER EL CONTENIDO DEL BANNER Y NO UNO POR UNO-->
+        <h2 class="banner__title"></h2>
+        <p class="banner__txt"></p>
+    </div>
+</div>
+
+
+<!--empiza la parte del main la etiquet amain es para definir el contendio
+principal d ela pagin-->
+<main class="main">
+<section class="welcome">
+<h2 class="welcome__title">UNIDADES DE 1 Y 2 DORMITORIOS</h2>
+<p class="welcome__txt"></p>
+    <a href=""  class="welcome__btn">READ MORE</a> 
+</section>
+
+
+<!--esta es la secicon de las cuatro fotos en el medio de la pagina-->
+<section class="conatiner-design" >
+<div class="design__item">
+    <h3 class="design__title">Fachada del edificio</h3>
+    <img src="../fotos/fachada fondo de menu.jpg" alt="" class="design__img">
+</div>
+<!--imagen uno -->
+
+<div class="design__item">
+    <h3 class="design__title">Living comedor</h3>
+    <img src="../fotos/PI_ESTAR COMEDOR.jpg" alt="" class="design__img">
+</div>
+
+<div class="design__item">
+    <h3 class="design__title">Dormitorio</h3>
+    <img src="../fotos/PI_DORMITORIO.jpg" alt="" class="design__img">
+</div>
+<!--imagen3-->
+
+<div class="design__item">
+    <h3 class="design__title">Barbacoa</h3>
+    <img src="../fotos/PI_BARBACOA.jpg" alt="" class="design__img">
+</div>
+<!--imagen 4-->
+</section>
+
+
+<!--seccion de comentarios y foto pequeña redonda -->
+<section  class="container-testimonials">
+<h3 class="welcome__title">DESCRIPCION GENERAL</h3>
+<img src="../fotos/fachada fondo de menu.jpg" alt="" class="testimonials__img">
+<p class="testimonials__txt">Patio Isidoro ofrece una propuesta Inmobiliaria con unidades de 1 y 2 dormitorios para vivir o invertir en una zona de gran valorización. Ubicado en el barrio de Aguada sobre la calle Isidoro de Maria y Marcelino Sosa. El edificio cuenta con 10 unidades, distribuidas en tres pisos más una barbacoa de uso común. <br><br>
+
+    Ubicado en punto ideal, a tan solo una cuadra de Facultad de Química y Facultad de Medicina, y también a una cuadra de Av. Gral Flores y Av. San Martin, todo próximo a Palacio Legislativo lo que brinda gran conectividad.</p>
+<p class="testimonials__name">ENTREGA A FINALES DEL 2022</p>
+
+</section>
+
+
+
+<!--efecto carrusel-->
+<button class="boton" id="myBtn"></button>
+ <section  class="container-tips">
+<div class="tipologias-carrusel">
+    <link rel="stylesheet" href="cajasseccion2.css">
+    <h2 class="tipologias">Tipologias</h2>
+</div>
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <img  src="../fotos/unoti.jpg" style='width: 100%;' alt="sally lightfoot crab"/>
+        <div class="text">
+            <h3 class="numbertext">Unidad 1 Dormitorio con Patio PB</h3>
+        </div>
+    </div>
+
+    <div class="mySlides fade">
+        <img  src='../fotos/dosti.jpg' style='width: 100%;' alt="fighting nazca boobies"/>
+        <div class="text">
+            <h3 class="numbertext">Tipologia1-1 Dormitorio con Patio PB</h3>
+        </div>
+    </div>
+
+    <div class="mySlides fade">
+        <img  src='../fotos/tresti.jpg' style='width: 100%;' alt="otovalo waterfall"/>
+        <div class="text">
+            <h3 class="numbertext">Tipologia 2 - 1 Dormitorio - Piso 1,2 y 3</h3>
+        </div>
+    </div>
+
+    <div class="mySlides fade">
+        <img  src='../fotos/cuatroti.jpg' style='width: 100%;' alt="otovalo waterfall"/>
+        <div class="text">
+            <h3 class="numbertext">Tipologia 2 - 1 Dormitorio - Piso 1,2 y 3</h3>
+        </div>
+    </div>
+
+    <div class="mySlides fade">
+        <img  src='../fotos/cincoti.jpg' style='width: 100%;' alt="otovalo waterfall"/>
+        <div class="text">
+            <h3 class="numbertext">Tipologia 3 - 2 Dormitorio - Piso 2 y 3</h3>
+        </div>
+    </div>
+
+    <div class="mySlides fade">
+        <img  src='../fotos/seisti.jpg' style='width: 100%;' alt="otovalo waterfall"/>
+        <div class="text">
+            <h3 class="numbertext">Tipologia 3 - 2 Dormitorio - Piso 2 y 3</h3>
+        </div>
+    </div>
+
+    <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
+    <a class="next" onclick='plusSlides(1)'>&#10095;</a>
+</div>
+<br/>
+<div style='text-align: center;'>
+    <span class="dot" onclick='currentSlide(1)'></span>
+    <span class="dot" onclick='currentSlide(2)'></span>
+    <span class="dot" onclick='currentSlide(3)'></span>
+</div>
+<br>
+    <div class="bounce">
+        <a href="#section2" >
+        </a>
+<link rel="stylesheet" href="../elementoscss/carrusel.css">
+<script src="../elementosjs/carusel.js"></script>
+    </div>
+
+    <!---iconos de con que se entrega la propiedad-->
+<div class="container-box">
+    <div class="box" >
+        <div class="box__icon"><i class="fa-solid fa-gear"></i></div>
+        <div class="box__content">
+            <h3 class="box__title">Se entrega con</h3>
+        <p class="box__txt">previsión para aire acondicionado</p>
+        </div>
+    </div>
+    <div class="box" >
+        <div class="box__icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+       <div class="box__content">
+        <h3 class="box__title">Se entrega</h3>
+        <p class="box__txt">previsión para lavaropas y lavavajillas</p>
+       </div>
+    </div>
+    <div class="box" >
+        <div class="box__icon"><i class="fa-solid fa-wifi"></i></div>
+        <div class="box__content">
+            <h3 class="box__title">Se entrega</h3>
+            <p class="box__txt">revision para cable y wifi</p>
+        </div>
+    </div>
+    <div class="box" >
+        <div class="box__icon"><i class="fa-solid fa-hammer"></i></div>
+        <div class="box__content">
+            <h3 class="box__title">Se entrega</h3>
+            <p class="box__txt">placard bajo mesa</p>
+        </div>
+    </div>
+</div>
+
+   
+
+
+    <!--seccion abajo de las entregas-->
+    <section class="newsletter">
+        <h2 class="welcome__title">Simplelza y confort lo encontras en Patio Isidoro</h2>
+    </section>
+</main>
+<!--fin del main-->
+
+<!--comienzo del footer-->
+<footer class="main-footer">
+    <!--columna 1 company-->
+    <div class="column column--50-25">
+        <h2 class="footer__title">  Company</h2>
+        <p class="footer__txt">Contrary to popular belief, Lorem 
+           <br> Ipsum is not simply random text. 
+           <br> It has roots in a piece of 
+            <br> Latin at Hampden-Sydney 
+            <br> College in Virginia from a Lorem 
+            <br> Ipsum passage,
+            <br> undoubtable source.</p>
+            <cite class="footer__author">- Adam Rose, MD
+            </cite>
+    </div>
+
+    <!--columna 2 instagram-->
+    <div class="column column--50-25">
+        <h2 class="footer__title">instagram--</h2>
+        <p class="footer__txt"> <i class="fa-brands fa-twitter"></i> Sed ut perspiciatis 
+            <br> unde omnis iste
+             natus 
+            <br> error sit voluptatem accus.</p>
+            <a href="" class="footer__link">http//example.com</a>
+            <p class="footer__time">About 15 minutes ago</p>
+            <!--segundo tw-->
+            <p class="footer__txt"> <i class="fa-brands fa-twitter"></i> Sed ut perspiciatis unde omnis iste natus 
+                <br> error sit voluptatem accus.</p>
+                <a href="" class="footer__link">http//example.com</a>
+                <p class="footer__time">About 15 minutes ago</p>
+    </div>
+
+    <!--columna 3 connect-->
+    <div class="column column--50-25">
+        <h2 class="footer__title">Connect</h2>
+<div class="footer__socials">
+    <!--icono de facebook-->
+<div class="social-icon">
+
+    <i class="fa-brands fa-facebook-f"></i>
+      <a class="social__link" href="">Like us on Facebook</a>
+</div>
+
+<!--icono de tw-->
+<div class="social-icon">
+    <i class="fa-brands fa-twitter"></i>
+      <a class="social__link" href="">Like us on Twiter</a>
+</div>
+
+<!--icono de instagram-->
+<div class="social-icon">
+    <i class="fa-brands fa-instagram"></i>
+      <a class="social__link" href="">Like us on instagram</a>
+</div>
+
+<!--icono de likedin-->
+<div class="social-icon">
+   <i class="fa-brands fa-linkedin"></i>
+      <a class="social__link" href="">Like us on linkedin</a>
+</div>
+
+<!--icono de google plus-->
+<div class="social-icon">
+    <i class="fa-brands fa-google-plus"></i>
+      <a class="social__link" href="">Like us on gogle-plus</a>
+</div>
+
+</div>
+    </div>
+
+
+    <!--columna 4 contac-->
+    <div class="column column--50-25">
+        <h2 class="footer__title">Contact</h2>
+ <!--icon2-->
+        <div class="contact-icon">
+            <i class="fa-solid fa-location-dot"></i>
+              <a class="social__link" href="">The company name</a>
+        </div>
+        <!--icon2-->
+        <div class="contact-icon">
+            <i class="fa-solid fa-phone"></i>
+              <a class="social__link" href="">123456789</a>
+        </div>
+ <!--icon2-->
+        <div class="contact-icon">
+<i class="fa-solid fa-envelope"></i>
+              <a class="social__link" href="">info@example.com</a>
+        </div>
+
+
+    </div>
+
+    <!--compy rai-->
+    <p class="copy">© 2017 Room Design. All Rights Reserved | 
+       <br> <span class="span-color">Design by W3layouts</span>  </p>
+
+
+      
+</footer>
+
+
+      
+
+<script src="../elementosjs/menu.js"></script>
+</body>
+</html>
